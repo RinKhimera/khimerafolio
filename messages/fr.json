@@ -1,0 +1,58 @@
+{
+  "Metadata": {
+    "title": "Samuel Pokam | Développeur Full-Stack",
+    "description": "Portfolio de Samuel Pokam — Développeur Full-Stack créant des expériences numériques modernes."
+  },
+  "Navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "greeting": "Bonjour, je suis",
+    "name": "Samuel Pokam",
+    "role": "Développeur Full-Stack",
+    "tagline": "Je construis des expériences web modernes avec du code propre et un design réfléchi.",
+    "cta_projects": "Voir les projets",
+    "cta_contact": "Me contacter"
+  },
+  "About": {
+    "title": "À propos",
+    "description": "Je suis un développeur full-stack passionné, spécialisé dans la création d'applications web performantes, accessibles et soigneusement conçues. J'adore travailler avec les technologies modernes et transformer des problèmes complexes en solutions élégantes.",
+    "resume": "Télécharger le CV"
+  },
+  "Projects": {
+    "title": "Projets en vedette",
+    "viewAll": "Voir tout",
+    "viewProject": "Voir le projet",
+    "viewCode": "Voir le code",
+    "techStack": "Technologies"
+  },
+  "Skills": {
+    "title": "Compétences & Technologies",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Outils & DevOps",
+      "languages": "Langages"
+    }
+  },
+  "Contact": {
+    "title": "Travaillons ensemble",
+    "subtitle": "Vous avez un projet en tête ou envie de discuter ? N'hésitez pas à me contacter.",
+    "email": "M'envoyer un email",
+    "social": "Me retrouver sur"
+  },
+  "Footer": {
+    "copyright": "Tous droits réservés.",
+    "builtWith": "Construit avec Next.js, Tailwind CSS & shadcn/ui"
+  },
+  "Common": {
+    "switchLanguage": "EN",
+    "lightMode": "Mode clair",
+    "darkMode": "Mode sombre",
+    "backToHome": "Retour à l'accueil"
+  }
+}

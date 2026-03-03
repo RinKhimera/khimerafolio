@@ -1,0 +1,58 @@
+{
+  "Metadata": {
+    "title": "Samuel Pokam | Full-Stack Developer",
+    "description": "Portfolio of Samuel Pokam — Full-Stack Developer crafting modern digital experiences."
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "greeting": "Hello, I'm",
+    "name": "Samuel Pokam",
+    "role": "Full-Stack Developer",
+    "tagline": "I build modern web experiences with clean code and thoughtful design.",
+    "cta_projects": "View Projects",
+    "cta_contact": "Get in Touch"
+  },
+  "About": {
+    "title": "About Me",
+    "description": "I'm a passionate full-stack developer with a focus on building performant, accessible, and beautifully crafted web applications. I love working with modern technologies and turning complex problems into elegant solutions.",
+    "resume": "Download Resume"
+  },
+  "Projects": {
+    "title": "Featured Projects",
+    "viewAll": "View All",
+    "viewProject": "View Project",
+    "viewCode": "View Code",
+    "techStack": "Tech Stack"
+  },
+  "Skills": {
+    "title": "Skills & Technologies",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Tools & DevOps",
+      "languages": "Languages"
+    }
+  },
+  "Contact": {
+    "title": "Let's Work Together",
+    "subtitle": "Have a project in mind or just want to chat? Feel free to reach out.",
+    "email": "Email Me",
+    "social": "Find me on"
+  },
+  "Footer": {
+    "copyright": "All rights reserved.",
+    "builtWith": "Built with Next.js, Tailwind CSS & shadcn/ui"
+  },
+  "Common": {
+    "switchLanguage": "FR",
+    "lightMode": "Light mode",
+    "darkMode": "Dark mode",
+    "backToHome": "Back to home"
+  }
+}
