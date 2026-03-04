@@ -28,7 +28,25 @@
     "viewAll": "Voir tout",
     "viewProject": "Voir le projet",
     "viewCode": "Voir le code",
-    "techStack": "Technologies"
+    "techStack": "Technologies",
+    "items": {
+      "nomaqbanq": {
+        "title": "NOMAQbanq",
+        "description": "Une plateforme de préparation aux examens médicaux (EACMC Partie I) avec une banque de 5000+ questions, des examens simulés chronométrés, un suivi de progression et un tableau de bord admin avec paiements Stripe."
+      },
+      "fantribe": {
+        "title": "FanTribe",
+        "description": "Une plateforme sociale pour créateurs de contenu avec monétisation par abonnements, messagerie en temps réel, streaming vidéo via Bunny CDN et support de paiement mobile money pour l'Afrique."
+      },
+      "mescontacts": {
+        "title": "Mescontacts.ca",
+        "description": "Un annuaire d'entreprises québécois avec recherche par catégorie et localisation, cartes interactives Mapbox et un tableau de bord admin complet pour la gestion des annonces vérifiées."
+      },
+      "delta": {
+        "title": "Projet Delta",
+        "description": "Une application mobile multiplateforme de suivi des finances personnelles avec support hors-ligne et synchronisation cloud via Firebase."
+      }
+    }
   },
   "Skills": {
     "title": "Compétences & Technologies",

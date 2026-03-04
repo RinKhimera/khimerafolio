@@ -7,32 +7,7 @@ import {
   StaggerItem,
 } from "@/components/animations/stagger-children";
 import { Badge } from "@/components/ui/badge";
-
-const skillCategories = [
-  {
-    key: "frontend",
-    skills: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
-      "HTML/CSS",
-    ],
-  },
-  {
-    key: "backend",
-    skills: ["Node.js", "Express", "PostgreSQL", "MongoDB", "Prisma", "REST APIs"],
-  },
-  {
-    key: "tools",
-    skills: ["Git", "Docker", "Vercel", "GitHub Actions", "Figma", "VS Code"],
-  },
-  {
-    key: "languages",
-    skills: ["TypeScript", "JavaScript", "Python", "Go", "SQL"],
-  },
-];
+import { skillCategories } from "@/data/skills";
 
 export function SkillsSection() {
   const t = useTranslations("Skills");
@@ -56,12 +31,13 @@ export function SkillsSection() {
                 </h3>
                 <StaggerChildren className="mt-4 flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
-                    <StaggerItem key={skill}>
+                    <StaggerItem key={skill.name}>
                       <Badge
                         variant="outline"
-                        className="px-3 py-1.5 text-sm transition-colors hover:bg-primary/10 hover:border-primary/30"
+                        className="gap-1.5 px-3 py-1.5 text-sm transition-colors hover:bg-primary/10 hover:border-primary/30"
                       >
-                        {skill}
+                        <skill.icon size={14} className="shrink-0" />
+                        {skill.name}
                       </Badge>
                     </StaggerItem>
                   ))}

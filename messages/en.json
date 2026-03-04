@@ -28,7 +28,25 @@
     "viewAll": "View All",
     "viewProject": "View Project",
     "viewCode": "View Code",
-    "techStack": "Tech Stack"
+    "techStack": "Tech Stack",
+    "items": {
+      "nomaqbanq": {
+        "title": "NOMAQbanq",
+        "description": "A medical exam preparation platform for the EACMC Part I, featuring a 5000+ question bank, timed mock exams, progress tracking, and an admin dashboard with Stripe payments."
+      },
+      "fantribe": {
+        "title": "FanTribe",
+        "description": "A social platform for content creators to monetize through subscriptions, with real-time messaging, video streaming via Bunny CDN, and mobile money payment support for Africa."
+      },
+      "mescontacts": {
+        "title": "Mescontacts.ca",
+        "description": "A Quebec-based business directory with category and location search, interactive Mapbox maps, and a full admin dashboard for managing verified listings."
+      },
+      "delta": {
+        "title": "Project Delta",
+        "description": "A cross-platform mobile app for personal finance tracking with offline support and cloud sync via Firebase."
+      }
+    }
   },
   "Skills": {
     "title": "Skills & Technologies",
