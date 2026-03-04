@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useTranslations } from "next-intl"
 import { ArrowRight, Github } from "lucide-react"
 import { Link } from "@/i18n/navigation"
@@ -31,11 +32,16 @@ export function ProjectsSection() {
           {featured.map((project) => (
             <StaggerItem key={project.slug}>
               <div className="group border-border bg-card hover:border-primary/30 relative rounded-xl border p-6 transition-colors">
-                {/* Image placeholder */}
-                <div className="bg-muted/50 mb-4 flex aspect-video items-center justify-center overflow-hidden rounded-lg">
-                  <span className="text-muted-foreground font-mono text-xs">
-                    screenshot
-                  </span>
+                {/* Project image */}
+                <div className="bg-muted/50 relative mb-4 aspect-video overflow-hidden rounded-lg">
+                  <Image
+                    src={project.image}
+                    alt={t(project.titleKey)}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    quality={90}
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
 
                 <h3 className="font-display text-lg font-semibold">

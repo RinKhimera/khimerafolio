@@ -34,9 +34,9 @@ export function SkillsSection() {
                     <StaggerItem key={skill.name}>
                       <Badge
                         variant="outline"
-                        className="hover:bg-primary/10 hover:border-primary/30 gap-1.5 px-3 py-1.5 text-sm transition-colors"
+                        className="hover:bg-primary/10 hover:border-primary/30 cursor-default gap-1.5 px-3 py-1.5 text-base transition-colors [&>svg]:size-4.5"
                       >
-                        <skill.icon size={14} className="shrink-0" />
+                        <skill.icon className="shrink-0" />
                         {skill.name}
                       </Badge>
                     </StaggerItem>

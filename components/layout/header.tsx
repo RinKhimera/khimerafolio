@@ -64,7 +64,7 @@ export const Header = () => {
               router.push("/")
             }
           }}
-          className="font-display text-xl font-bold tracking-tight"
+          className="cursor-pointer font-display text-xl font-bold tracking-tight"
         >
           {siteConfig.username}
         </button>
@@ -76,7 +76,7 @@ export const Header = () => {
               key={link.key}
               onClick={() => handleNavClick(link.href)}
               className={cn(
-                "rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                "cursor-pointer rounded-md px-3 py-2 text-sm font-medium transition-colors",
                 activeId === link.key
                   ? "text-primary"
                   : "text-muted-foreground hover:text-foreground",
@@ -110,7 +110,7 @@ export const Header = () => {
                     key={link.key}
                     onClick={() => handleNavClick(link.href)}
                     className={cn(
-                      "rounded-md px-3 py-2 text-left text-sm font-medium transition-colors",
+                      "cursor-pointer rounded-md px-3 py-2 text-left text-sm font-medium transition-colors",
                       activeId === link.key
                         ? "text-primary bg-accent"
                         : "text-muted-foreground hover:text-foreground",

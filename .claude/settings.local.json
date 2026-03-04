@@ -1,5 +1,8 @@
 {
   "permissions": {
-    "allow": ["Bash(pnpm build)"]
+    "allow": [
+      "Bash(pnpm build)",
+      "Bash(bun run build)"
+    ]
   }
 }

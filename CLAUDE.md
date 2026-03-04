@@ -3,9 +3,9 @@
 ## Commands
 
 ```bash
-pnpm dev          # Start dev server (Turbopack, localhost:3000)
-pnpm build        # Production build
-pnpm lint         # ESLint
+bun dev           # Start dev server (Turbopack, localhost:3000)
+bun run build     # Production build
+bun lint          # ESLint
 ```
 
 ## Architecture
@@ -51,7 +51,7 @@ lib/                  # Utilities (cn), constants
 - **motion "use client"**: All components using `motion` must be client components. Animation wrappers in `components/animations/` handle this boundary.
 - **i18n translations**: Use `useTranslations("Namespace")` in client components, `getTranslations()` in server components. Translation keys are structured as `Namespace.key`.
 - **Fonts**: Syne (`font-display`), Geist Sans (`font-sans`), JetBrains Mono (`font-mono`). Variables set in locale layout, mapped in `globals.css` via `@theme inline`.
-- **Package manager**: pnpm exclusively. Use `pnpm dlx` for one-off CLI tools (e.g., `pnpm dlx shadcn@latest add`).
+- **Package manager**: Bun exclusively. Use `bunx` for one-off CLI tools (e.g., `bunx shadcn@latest add`).
 
 ## Code Style
 

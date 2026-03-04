@@ -80,6 +80,7 @@ export const ProjectDetailContent = ({
                 alt={t(project.titleKey)}
                 width={1200}
                 height={675}
+                quality={90}
                 className="h-full w-full object-cover"
                 priority
               />
