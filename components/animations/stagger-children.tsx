@@ -1,7 +1,7 @@
-"use client";
+"use client"
 
-import { motion, type Variants } from "motion/react";
-import type { ReactNode } from "react";
+import { motion, type Variants } from "motion/react"
+import type { ReactNode } from "react"
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -12,7 +12,7 @@ const containerVariants: Variants = {
       delayChildren: 0.2,
     },
   },
-};
+}
 
 const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -21,11 +21,11 @@ const itemVariants: Variants = {
     y: 0,
     transition: { duration: 0.5, ease: "easeOut" },
   },
-};
+}
 
 interface StaggerChildrenProps {
-  children: ReactNode;
-  className?: string;
+  children: ReactNode
+  className?: string
 }
 
 export function StaggerChildren({ children, className }: StaggerChildrenProps) {
@@ -39,19 +39,19 @@ export function StaggerChildren({ children, className }: StaggerChildrenProps) {
     >
       {children}
     </motion.div>
-  );
+  )
 }
 
 export function StaggerItem({
   children,
   className,
 }: {
-  children: ReactNode;
-  className?: string;
+  children: ReactNode
+  className?: string
 }) {
   return (
     <motion.div variants={itemVariants} className={className}>
       {children}
     </motion.div>
-  );
+  )
 }

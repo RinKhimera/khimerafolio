@@ -1,12 +1,12 @@
-"use client";
+"use client"
 
-import { useTranslations } from "next-intl";
-import { motion } from "motion/react";
-import { ArrowDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl"
+import { motion } from "motion/react"
+import { ArrowDown } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
-  const t = useTranslations("Hero");
+  const t = useTranslations("Hero")
 
   return (
     <section
@@ -22,7 +22,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-mono text-sm uppercase tracking-widest text-muted-foreground"
+          className="text-muted-foreground font-mono text-sm tracking-widest uppercase"
         >
           {t("greeting")}
         </motion.p>
@@ -32,7 +32,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="mt-4 font-display text-5xl font-bold tracking-tight sm:text-7xl lg:text-8xl"
+          className="font-display mt-4 text-5xl font-bold tracking-tight sm:text-7xl lg:text-8xl"
         >
           {t("name")}
         </motion.h1>
@@ -42,7 +42,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-4 font-mono text-lg text-primary sm:text-xl"
+          className="text-primary mt-4 font-mono text-lg sm:text-xl"
         >
           {t("role")}
         </motion.p>
@@ -52,7 +52,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="mx-auto mt-6 max-w-xl text-base text-muted-foreground sm:text-lg"
+          className="text-muted-foreground mx-auto mt-6 max-w-xl text-base sm:text-lg"
         >
           {t("tagline")}
         </motion.p>
@@ -101,9 +101,9 @@ export function HeroSection() {
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
         >
-          <ArrowDown className="h-5 w-5 text-muted-foreground" />
+          <ArrowDown className="text-muted-foreground h-5 w-5" />
         </motion.div>
       </motion.div>
     </section>
-  );
+  )
 }

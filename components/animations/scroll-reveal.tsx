@@ -1,12 +1,12 @@
-"use client";
+"use client"
 
-import { motion } from "motion/react";
-import type { ReactNode } from "react";
+import { motion } from "motion/react"
+import type { ReactNode } from "react"
 
 interface ScrollRevealProps {
-  children: ReactNode;
-  className?: string;
-  delay?: number;
+  children: ReactNode
+  className?: string
+  delay?: number
 }
 
 export function ScrollReveal({
@@ -24,5 +24,5 @@ export function ScrollReveal({
     >
       {children}
     </motion.div>
-  );
+  )
 }

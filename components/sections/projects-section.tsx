@@ -1,20 +1,21 @@
-"use client";
+"use client"
 
-import { useTranslations } from "next-intl";
-import { ExternalLink, Github } from "lucide-react";
-import { ScrollReveal } from "@/components/animations/scroll-reveal";
+import { useTranslations } from "next-intl"
+import { ArrowRight, Github } from "lucide-react"
+import { Link } from "@/i18n/navigation"
+import { ScrollReveal } from "@/components/animations/scroll-reveal"
 import {
   StaggerChildren,
   StaggerItem,
-} from "@/components/animations/stagger-children";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { projects } from "@/data/projects";
+} from "@/components/animations/stagger-children"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { projects } from "@/data/projects"
 
 export function ProjectsSection() {
-  const t = useTranslations("Projects");
+  const t = useTranslations("Projects")
 
-  const featured = projects.filter((p) => p.featured);
+  const featured = projects.filter((p) => p.featured)
 
   return (
     <section id="projects" className="bg-muted/30 py-24 sm:py-32">
@@ -29,10 +30,10 @@ export function ProjectsSection() {
         <StaggerChildren className="mt-12 grid gap-6 md:grid-cols-2">
           {featured.map((project) => (
             <StaggerItem key={project.slug}>
-              <div className="group relative rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/30">
+              <div className="group border-border bg-card hover:border-primary/30 relative rounded-xl border p-6 transition-colors">
                 {/* Image placeholder */}
-                <div className="mb-4 aspect-video rounded-lg bg-muted/50 flex items-center justify-center overflow-hidden">
-                  <span className="text-xs text-muted-foreground font-mono">
+                <div className="bg-muted/50 mb-4 flex aspect-video items-center justify-center overflow-hidden rounded-lg">
+                  <span className="text-muted-foreground font-mono text-xs">
                     screenshot
                   </span>
                 </div>
@@ -40,7 +41,7 @@ export function ProjectsSection() {
                 <h3 className="font-display text-lg font-semibold">
                   {t(project.titleKey)}
                 </h3>
-                <p className="mt-2 text-sm text-muted-foreground">
+                <p className="text-muted-foreground mt-2 text-sm">
                   {t(project.descriptionKey)}
                 </p>
 
@@ -56,7 +57,12 @@ export function ProjectsSection() {
                 {/* Links */}
                 <div className="mt-4 flex gap-2">
                   {project.githubUrl && (
-                    <Button variant="ghost" size="sm" asChild className="gap-1.5 text-xs">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      asChild
+                      className="gap-1.5 text-xs"
+                    >
                       <a
                         href={project.githubUrl}
                         target="_blank"
@@ -67,18 +73,17 @@ export function ProjectsSection() {
                       </a>
                     </Button>
                   )}
-                  {project.liveUrl && (
-                    <Button variant="ghost" size="sm" asChild className="gap-1.5 text-xs">
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink className="h-3.5 w-3.5" />
-                        {t("viewProject")}
-                      </a>
-                    </Button>
-                  )}
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    asChild
+                    className="gap-1.5 text-xs"
+                  >
+                    <Link href={`/projects/${project.slug}`}>
+                      <ArrowRight className="h-3.5 w-3.5" />
+                      {t("viewProject")}
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </StaggerItem>
@@ -86,5 +91,5 @@ export function ProjectsSection() {
         </StaggerChildren>
       </div>
     </section>
-  );
+  )
 }

@@ -1,16 +1,16 @@
-"use client";
+"use client"
 
-import { useTranslations } from "next-intl";
-import { ScrollReveal } from "@/components/animations/scroll-reveal";
+import { useTranslations } from "next-intl"
+import { ScrollReveal } from "@/components/animations/scroll-reveal"
 import {
   StaggerChildren,
   StaggerItem,
-} from "@/components/animations/stagger-children";
-import { Badge } from "@/components/ui/badge";
-import { skillCategories } from "@/data/skills";
+} from "@/components/animations/stagger-children"
+import { Badge } from "@/components/ui/badge"
+import { skillCategories } from "@/data/skills"
 
 export function SkillsSection() {
-  const t = useTranslations("Skills");
+  const t = useTranslations("Skills")
 
   return (
     <section id="skills" className="py-24 sm:py-32">
@@ -26,7 +26,7 @@ export function SkillsSection() {
           {skillCategories.map((category, idx) => (
             <ScrollReveal key={category.key} delay={idx * 0.1}>
               <div>
-                <h3 className="font-mono text-sm uppercase tracking-widest text-primary">
+                <h3 className="text-primary font-mono text-sm tracking-widest uppercase">
                   {t(`categories.${category.key}`)}
                 </h3>
                 <StaggerChildren className="mt-4 flex flex-wrap gap-2">
@@ -34,7 +34,7 @@ export function SkillsSection() {
                     <StaggerItem key={skill.name}>
                       <Badge
                         variant="outline"
-                        className="gap-1.5 px-3 py-1.5 text-sm transition-colors hover:bg-primary/10 hover:border-primary/30"
+                        className="hover:bg-primary/10 hover:border-primary/30 gap-1.5 px-3 py-1.5 text-sm transition-colors"
                       >
                         <skill.icon size={14} className="shrink-0" />
                         {skill.name}
@@ -48,5 +48,5 @@ export function SkillsSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

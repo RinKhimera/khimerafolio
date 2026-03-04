@@ -1,13 +1,13 @@
-"use client";
+"use client"
 
-import { useTranslations } from "next-intl";
-import { Mail, Github, Linkedin, Twitter } from "lucide-react";
-import { ScrollReveal } from "@/components/animations/scroll-reveal";
-import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/lib/constants";
+import { useTranslations } from "next-intl"
+import { Mail, Github, Linkedin, Twitter } from "lucide-react"
+import { ScrollReveal } from "@/components/animations/scroll-reveal"
+import { Button } from "@/components/ui/button"
+import { siteConfig } from "@/lib/constants"
 
 export function ContactSection() {
-  const t = useTranslations("Contact");
+  const t = useTranslations("Contact")
 
   return (
     <section id="contact" className="bg-muted/30 py-24 sm:py-32">
@@ -17,7 +17,7 @@ export function ContactSection() {
             {t("title")}
             <span className="text-primary">.</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-md text-muted-foreground">
+          <p className="text-muted-foreground mx-auto mt-4 max-w-md">
             {t("subtitle")}
           </p>
         </ScrollReveal>
@@ -35,7 +35,7 @@ export function ContactSection() {
 
         <ScrollReveal delay={0.3}>
           <div className="mt-8">
-            <p className="text-sm text-muted-foreground">{t("social")}</p>
+            <p className="text-muted-foreground text-sm">{t("social")}</p>
             <div className="mt-4 flex items-center justify-center gap-4">
               <Button variant="ghost" size="icon" asChild>
                 <a
@@ -72,5 +72,5 @@ export function ContactSection() {
         </ScrollReveal>
       </div>
     </section>
-  );
+  )
 }

@@ -1,18 +1,18 @@
-import { useTranslations } from "next-intl";
-import { siteConfig } from "@/lib/constants";
+import { useTranslations } from "next-intl"
+import { siteConfig } from "@/lib/constants"
 
 export function Footer() {
-  const t = useTranslations("Footer");
-  const year = new Date().getFullYear();
+  const t = useTranslations("Footer")
+  const year = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-border">
+    <footer className="border-border border-t">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 sm:flex-row">
-        <p className="text-sm text-muted-foreground">
+        <p className="text-muted-foreground text-sm">
           &copy; {year} {siteConfig.name}. {t("copyright")}
         </p>
-        <p className="text-xs text-muted-foreground">{t("builtWith")}</p>
+        <p className="text-muted-foreground text-xs">{t("builtWith")}</p>
       </div>
     </footer>
-  );
+  )
 }

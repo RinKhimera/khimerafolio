@@ -32,21 +32,81 @@
     "items": {
       "nomaqbanq": {
         "title": "NOMAQbanq",
-        "description": "A medical exam preparation platform for the EACMC Part I, featuring a 5000+ question bank, timed mock exams, progress tracking, and an admin dashboard with Stripe payments."
+        "description": "A medical exam preparation platform for the EACMC Part I, featuring a 5000+ question bank, timed mock exams, progress tracking, and an admin dashboard with Stripe payments.",
+        "longDescription": "NOMAQbanq is a comprehensive medical exam preparation platform designed for candidates preparing for the EACMC Part I examination. The platform provides an extensive question bank of over 5,000 practice questions organized by medical discipline, along with timed mock exams that simulate real test conditions. Students can track their progress through detailed analytics dashboards, identify weak areas, and focus their study efforts accordingly. The platform includes a full admin interface for content management and integrates Stripe for subscription-based access.",
+        "features": [
+          "5,000+ practice questions organized by medical discipline with detailed explanations",
+          "Timed mock exams simulating real EACMC Part I test conditions",
+          "Progress tracking with analytics dashboard and performance insights",
+          "Admin dashboard for question management and user administration",
+          "Stripe-powered subscription system with multiple plan tiers"
+        ],
+        "challenges": [
+          "Implemented real-time data sync with Convex for instant progress updates across devices",
+          "Built a performant question rendering engine handling rich medical content with images and formatting",
+          "Designed a scalable exam timer system that persists state across browser refreshes"
+        ]
       },
       "fantribe": {
         "title": "FanTribe",
-        "description": "A social platform for content creators to monetize through subscriptions, with real-time messaging, video streaming via Bunny CDN, and mobile money payment support for Africa."
+        "description": "A social platform for content creators to monetize through subscriptions, with real-time messaging, video streaming via Bunny CDN, and mobile money payment support for Africa.",
+        "longDescription": "FanTribe is a social platform that empowers content creators to build communities and monetize their work through subscription-based access. The platform features real-time messaging between creators and subscribers, video content delivery via Bunny CDN for optimal streaming performance, and supports mobile money payment methods tailored for the African market alongside traditional payment options through Stripe.",
+        "features": [
+          "Subscription-based monetization system for content creators",
+          "Real-time messaging and community features powered by Convex",
+          "Video streaming and content delivery via Bunny CDN",
+          "Mobile money payment integration for African markets",
+          "Creator dashboard with analytics, subscriber management, and content scheduling"
+        ],
+        "challenges": [
+          "Integrated multiple payment providers (Stripe + mobile money) with unified subscription management",
+          "Optimized video delivery pipeline with Bunny CDN for low-latency streaming across regions",
+          "Built real-time notification system handling high concurrency with Convex subscriptions"
+        ]
       },
       "mescontacts": {
         "title": "Mescontacts.ca",
-        "description": "A Quebec-based business directory with category and location search, interactive Mapbox maps, and a full admin dashboard for managing verified listings."
+        "description": "A Quebec-based business directory with category and location search, interactive Mapbox maps, and a full admin dashboard for managing verified listings.",
+        "longDescription": "Mescontacts.ca is a Quebec-focused business directory that helps users discover local businesses through powerful search and interactive maps. The platform features category and location-based filtering, interactive Mapbox maps for visual exploration, and a comprehensive admin dashboard for managing and verifying business listings. Built to serve the Quebec community with a focus on discoverability and trust.",
+        "features": [
+          "Advanced search with category and location-based filtering",
+          "Interactive Mapbox maps for visual business discovery",
+          "Full admin dashboard for listing management and verification",
+          "Business profiles with contact details, hours, and reviews"
+        ],
+        "challenges": [
+          "Integrated Mapbox GL with dynamic clustering for thousands of business markers",
+          "Built a verification workflow ensuring listing quality and accuracy",
+          "Optimized search with geospatial queries for fast location-based results"
+        ]
       },
       "delta": {
         "title": "Project Delta",
-        "description": "A cross-platform mobile app for personal finance tracking with offline support and cloud sync via Firebase."
+        "description": "A cross-platform mobile app for personal finance tracking with offline support and cloud sync via Firebase.",
+        "longDescription": "Project Delta is a cross-platform mobile application for personal finance management, built with React Native and Expo. The app enables users to track expenses, set budgets, and visualize spending patterns through intuitive charts. It features full offline support with local data persistence and seamless cloud synchronization via Firebase, ensuring users always have access to their financial data.",
+        "features": [
+          "Expense tracking with categorization and budget management",
+          "Visual spending analytics with interactive charts",
+          "Full offline support with local persistence",
+          "Cloud sync via Firebase for cross-device access"
+        ],
+        "challenges": [
+          "Implemented offline-first architecture with conflict resolution for cloud sync",
+          "Built performant chart rendering for large datasets on mobile devices"
+        ]
       }
     }
+  },
+  "ProjectDetail": {
+    "backToProjects": "Back to Projects",
+    "overview": "Overview",
+    "keyFeatures": "Key Features",
+    "technicalHighlights": "Technical Highlights",
+    "techStack": "Tech Stack",
+    "screenshots": "Screenshots",
+    "visitLive": "Visit Live Site",
+    "viewSource": "View Source Code",
+    "year": "Year"
   },
   "Skills": {
     "title": "Skills & Technologies",

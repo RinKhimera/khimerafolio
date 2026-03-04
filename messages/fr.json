@@ -32,21 +32,81 @@
     "items": {
       "nomaqbanq": {
         "title": "NOMAQbanq",
-        "description": "Une plateforme de préparation aux examens médicaux (EACMC Partie I) avec une banque de 5000+ questions, des examens simulés chronométrés, un suivi de progression et un tableau de bord admin avec paiements Stripe."
+        "description": "Une plateforme de préparation aux examens médicaux (EACMC Partie I) avec une banque de 5000+ questions, des examens simulés chronométrés, un suivi de progression et un tableau de bord admin avec paiements Stripe.",
+        "longDescription": "NOMAQbanq est une plateforme complète de préparation aux examens médicaux conçue pour les candidats se préparant à l'examen EACMC Partie I. La plateforme offre une vaste banque de plus de 5 000 questions pratiques organisées par discipline médicale, ainsi que des examens simulés chronométrés reproduisant les conditions réelles du test. Les étudiants peuvent suivre leur progression grâce à des tableaux de bord analytiques détaillés, identifier leurs points faibles et concentrer leurs efforts d'étude en conséquence. La plateforme comprend une interface d'administration complète pour la gestion du contenu et intègre Stripe pour l'accès par abonnement.",
+        "features": [
+          "Plus de 5 000 questions pratiques organisées par discipline médicale avec explications détaillées",
+          "Examens simulés chronométrés reproduisant les conditions réelles de l'EACMC Partie I",
+          "Suivi de progression avec tableau de bord analytique et aperçus de performance",
+          "Tableau de bord administrateur pour la gestion des questions et des utilisateurs",
+          "Système d'abonnement Stripe avec plusieurs niveaux de forfaits"
+        ],
+        "challenges": [
+          "Synchronisation des données en temps réel avec Convex pour des mises à jour instantanées entre appareils",
+          "Moteur de rendu de questions performant gérant du contenu médical riche avec images et formatage",
+          "Système de minuterie d'examen évolutif qui persiste l'état entre les rafraîchissements du navigateur"
+        ]
       },
       "fantribe": {
         "title": "FanTribe",
-        "description": "Une plateforme sociale pour créateurs de contenu avec monétisation par abonnements, messagerie en temps réel, streaming vidéo via Bunny CDN et support de paiement mobile money pour l'Afrique."
+        "description": "Une plateforme sociale pour créateurs de contenu avec monétisation par abonnements, messagerie en temps réel, streaming vidéo via Bunny CDN et support de paiement mobile money pour l'Afrique.",
+        "longDescription": "FanTribe est une plateforme sociale qui permet aux créateurs de contenu de bâtir des communautés et de monétiser leur travail grâce à un accès par abonnement. La plateforme offre une messagerie en temps réel entre créateurs et abonnés, une diffusion de contenu vidéo via Bunny CDN pour des performances de streaming optimales, et prend en charge les méthodes de paiement mobile money adaptées au marché africain en plus des options de paiement traditionnelles via Stripe.",
+        "features": [
+          "Système de monétisation par abonnement pour les créateurs de contenu",
+          "Messagerie en temps réel et fonctionnalités communautaires propulsées par Convex",
+          "Streaming vidéo et diffusion de contenu via Bunny CDN",
+          "Intégration du paiement mobile money pour les marchés africains",
+          "Tableau de bord créateur avec analytiques, gestion des abonnés et planification de contenu"
+        ],
+        "challenges": [
+          "Intégration de plusieurs fournisseurs de paiement (Stripe + mobile money) avec gestion unifiée des abonnements",
+          "Pipeline de diffusion vidéo optimisé avec Bunny CDN pour un streaming à faible latence à travers les régions",
+          "Système de notifications en temps réel gérant une forte concurrence avec les souscriptions Convex"
+        ]
       },
       "mescontacts": {
         "title": "Mescontacts.ca",
-        "description": "Un annuaire d'entreprises québécois avec recherche par catégorie et localisation, cartes interactives Mapbox et un tableau de bord admin complet pour la gestion des annonces vérifiées."
+        "description": "Un annuaire d'entreprises québécois avec recherche par catégorie et localisation, cartes interactives Mapbox et un tableau de bord admin complet pour la gestion des annonces vérifiées.",
+        "longDescription": "Mescontacts.ca est un annuaire d'entreprises axé sur le Québec qui aide les utilisateurs à découvrir des entreprises locales grâce à une recherche puissante et des cartes interactives. La plateforme propose un filtrage par catégorie et localisation, des cartes interactives Mapbox pour l'exploration visuelle, et un tableau de bord administrateur complet pour la gestion et la vérification des annonces d'entreprises. Conçu pour servir la communauté québécoise avec un accent sur la découvrabilité et la confiance.",
+        "features": [
+          "Recherche avancée avec filtrage par catégorie et localisation",
+          "Cartes interactives Mapbox pour la découverte visuelle d'entreprises",
+          "Tableau de bord administrateur complet pour la gestion et la vérification des annonces",
+          "Profils d'entreprises avec coordonnées, horaires et avis"
+        ],
+        "challenges": [
+          "Intégration de Mapbox GL avec regroupement dynamique pour des milliers de marqueurs d'entreprises",
+          "Workflow de vérification garantissant la qualité et l'exactitude des annonces",
+          "Recherche optimisée avec requêtes géospatiales pour des résultats rapides basés sur la localisation"
+        ]
       },
       "delta": {
         "title": "Projet Delta",
-        "description": "Une application mobile multiplateforme de suivi des finances personnelles avec support hors-ligne et synchronisation cloud via Firebase."
+        "description": "Une application mobile multiplateforme de suivi des finances personnelles avec support hors-ligne et synchronisation cloud via Firebase.",
+        "longDescription": "Projet Delta est une application mobile multiplateforme pour la gestion des finances personnelles, construite avec React Native et Expo. L'application permet aux utilisateurs de suivre leurs dépenses, définir des budgets et visualiser leurs habitudes de dépenses à travers des graphiques intuitifs. Elle dispose d'un support hors-ligne complet avec persistance locale des données et synchronisation cloud fluide via Firebase, garantissant aux utilisateurs un accès permanent à leurs données financières.",
+        "features": [
+          "Suivi des dépenses avec catégorisation et gestion de budget",
+          "Analytiques visuelles des dépenses avec graphiques interactifs",
+          "Support hors-ligne complet avec persistance locale",
+          "Synchronisation cloud via Firebase pour l'accès multi-appareils"
+        ],
+        "challenges": [
+          "Architecture offline-first avec résolution de conflits pour la synchronisation cloud",
+          "Rendu de graphiques performant pour de grands ensembles de données sur appareils mobiles"
+        ]
       }
     }
+  },
+  "ProjectDetail": {
+    "backToProjects": "Retour aux projets",
+    "overview": "Aperçu",
+    "keyFeatures": "Fonctionnalités clés",
+    "technicalHighlights": "Points techniques",
+    "techStack": "Technologies",
+    "screenshots": "Captures d'écran",
+    "visitLive": "Voir le site",
+    "viewSource": "Voir le code source",
+    "year": "Année"
   },
   "Skills": {
     "title": "Compétences & Technologies",

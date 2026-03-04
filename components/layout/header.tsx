@@ -1,54 +1,69 @@
-"use client";
+"use client"
 
-import { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
-import { Menu } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { navLinks, siteConfig } from "@/lib/constants";
-import { useScrollSpy } from "@/hooks/use-scroll-spy";
-import { ThemeToggle } from "@/components/layout/theme-toggle";
-import { LanguageSwitcher } from "@/components/layout/language-switcher";
-import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react"
+import { useTranslations } from "next-intl"
+import { Menu } from "lucide-react"
+import { cn } from "@/lib/utils"
+import { navLinks, siteConfig } from "@/lib/constants"
+import { useScrollSpy } from "@/hooks/use-scroll-spy"
+import { usePathname, useRouter } from "@/i18n/navigation"
+import { ThemeToggle } from "@/components/layout/theme-toggle"
+import { LanguageSwitcher } from "@/components/layout/language-switcher"
+import { Button } from "@/components/ui/button"
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
   SheetTitle,
-} from "@/components/ui/sheet";
+} from "@/components/ui/sheet"
 
-export function Header() {
-  const t = useTranslations("Navigation");
-  const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
-  const activeId = useScrollSpy(navLinks.map((l) => l.key));
+export const Header = () => {
+  const t = useTranslations("Navigation")
+  const pathname = usePathname()
+  const router = useRouter()
+  const [scrolled, setScrolled] = useState(false)
+  const [open, setOpen] = useState(false)
+  const activeId = useScrollSpy(navLinks.map((l) => l.key))
+
+  const isHome = pathname === "/"
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    const onScroll = () => setScrolled(window.scrollY > 50)
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
 
   const handleNavClick = (href: string) => {
-    setOpen(false);
-    const el = document.querySelector(href);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
+    setOpen(false)
+    if (isHome) {
+      const el = document.querySelector(href)
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" })
+      }
+    } else {
+      router.push(`/${href}`)
     }
-  };
+  }
 
   return (
     <header
       className={cn(
         "fixed top-0 z-50 w-full transition-all duration-300",
         scrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-border"
-          : "bg-transparent"
+          ? "bg-background/80 border-border border-b backdrop-blur-md"
+          : "bg-transparent",
       )}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         {/* Logo */}
         <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          onClick={() => {
+            if (isHome) {
+              window.scrollTo({ top: 0, behavior: "smooth" })
+            } else {
+              router.push("/")
+            }
+          }}
           className="font-display text-xl font-bold tracking-tight"
         >
           {siteConfig.username}
@@ -64,7 +79,7 @@ export function Header() {
                 "rounded-md px-3 py-2 text-sm font-medium transition-colors",
                 activeId === link.key
                   ? "text-primary"
-                  : "text-muted-foreground hover:text-foreground"
+                  : "text-muted-foreground hover:text-foreground",
               )}
             >
               {t(link.key)}
@@ -98,7 +113,7 @@ export function Header() {
                       "rounded-md px-3 py-2 text-left text-sm font-medium transition-colors",
                       activeId === link.key
                         ? "text-primary bg-accent"
-                        : "text-muted-foreground hover:text-foreground"
+                        : "text-muted-foreground hover:text-foreground",
                     )}
                   >
                     {t(link.key)}
@@ -110,5 +125,5 @@ export function Header() {
         </div>
       </div>
     </header>
-  );
+  )
 }

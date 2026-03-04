@@ -1,4 +1,4 @@
-import type { ComponentType } from "react";
+import type { ComponentType } from "react"
 import {
   SiReact,
   SiNextdotjs,
@@ -23,16 +23,16 @@ import {
   SiFramer,
   SiHtml5,
   SiCss,
-} from "@icons-pack/react-simple-icons";
+} from "@icons-pack/react-simple-icons"
 
 export interface Skill {
-  name: string;
-  icon: ComponentType<{ size?: number; className?: string }>;
+  name: string
+  icon: ComponentType<{ size?: number; className?: string }>
 }
 
 export interface SkillCategory {
-  key: string;
-  skills: Skill[];
+  key: string
+  skills: Skill[]
 }
 
 export const skillCategories: SkillCategory[] = [
@@ -80,4 +80,4 @@ export const skillCategories: SkillCategory[] = [
       { name: "Python", icon: SiPython },
     ],
   },
-];
+]
