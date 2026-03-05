@@ -103,7 +103,10 @@ export const HeroSection = () => {
                 },
               })}
         >
-          <ArrowDown className="text-muted-foreground h-5 w-5" />
+          <ArrowDown
+            aria-hidden="true"
+            className="text-muted-foreground h-5 w-5"
+          />
         </motion.div>
       </motion.button>
     </section>

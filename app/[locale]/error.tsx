@@ -1,14 +1,24 @@
 "use client"
 
+import { useEffect } from "react"
 import { useTranslations } from "next-intl"
 import { motion, useReducedMotion } from "motion/react"
-import { ArrowLeft } from "lucide-react"
+import { AlertTriangle, ArrowLeft, RefreshCw } from "lucide-react"
 import { Link } from "@/i18n/navigation"
 import { Button } from "@/components/ui/button"
 
-const NotFound = () => {
-  const t = useTranslations("NotFound")
+type ErrorPageProps = {
+  error: Error & { digest?: string }
+  reset: () => void
+}
+
+const ErrorPage = ({ error, reset }: ErrorPageProps) => {
+  const t = useTranslations("Error")
   const shouldReduce = useReducedMotion()
+
+  useEffect(() => {
+    console.error(error)
+  }, [error])
 
   const entrance = (delay: number, y = 20) =>
     shouldReduce
@@ -25,7 +35,7 @@ const NotFound = () => {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--accent)_0%,transparent_50%)] opacity-30" />
 
       <div className="relative mx-auto max-w-2xl text-center">
-        {/* Giant 404 — architectural background element */}
+        {/* Giant alert icon — architectural background element */}
         <motion.div
           {...(shouldReduce
             ? {}
@@ -35,15 +45,16 @@ const NotFound = () => {
                 transition: { duration: 0.8, ease: "easeOut" },
               })}
           aria-hidden="true"
-          className="pointer-events-none select-none"
+          className="pointer-events-none flex items-center justify-center select-none"
         >
-          <span className="text-primary font-mono text-[10rem] leading-none font-bold opacity-[0.08] sm:text-[14rem] lg:text-[18rem]">
-            {t("code")}
-          </span>
+          <AlertTriangle
+            className="text-primary size-40 opacity-[0.08] sm:size-56 lg:size-72"
+            strokeWidth={1}
+          />
         </motion.div>
 
-        {/* Content — overlaps the 404 via negative margin */}
-        <div className="-mt-20 sm:-mt-28 lg:-mt-36">
+        {/* Content — overlaps the icon via negative margin */}
+        <div className="-mt-16 sm:-mt-20 lg:-mt-24">
           {/* Decorative dash */}
           <motion.div
             {...entrance(0.2)}
@@ -51,7 +62,7 @@ const NotFound = () => {
           >
             <span className="bg-primary/40 h-px w-8" />
             <span className="text-primary font-mono text-xs tracking-[0.3em] uppercase">
-              {t("code")}
+              error
             </span>
             <span className="bg-primary/40 h-px w-8" />
           </motion.div>
@@ -73,8 +84,20 @@ const NotFound = () => {
             {t("description")}
           </motion.p>
 
-          {/* CTA */}
-          <motion.div {...entrance(0.65)} className="mt-10">
+          {/* CTAs */}
+          <motion.div
+            {...entrance(0.65)}
+            className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+          >
+            <Button
+              size="lg"
+              variant="outline"
+              onClick={reset}
+              className="font-medium"
+            >
+              <RefreshCw aria-hidden="true" className="size-4" />
+              {t("tryAgain")}
+            </Button>
             <Button size="lg" asChild className="font-medium">
               <Link href="/">
                 <ArrowLeft aria-hidden="true" className="size-4" />
@@ -88,4 +111,4 @@ const NotFound = () => {
   )
 }
 
-export default NotFound
+export default ErrorPage

@@ -77,7 +77,7 @@ export function ProjectsSection() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Github className="h-3.5 w-3.5" />
+                        <Github aria-hidden="true" className="h-3.5 w-3.5" />
                         {t("viewCode")}
                       </a>
                     </Button>
@@ -89,7 +89,7 @@ export function ProjectsSection() {
                     className="gap-1.5 text-xs"
                   >
                     <Link href={`/projects/${project.slug}`}>
-                      <ArrowRight className="h-3.5 w-3.5" />
+                      <ArrowRight aria-hidden="true" className="h-3.5 w-3.5" />
                       {t("viewProject")}
                     </Link>
                   </Button>

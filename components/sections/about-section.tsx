@@ -432,7 +432,7 @@ export const AboutSection = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FileDown className="h-4 w-4" />
+                    <FileDown aria-hidden="true" className="h-4 w-4" />
                     {t("resume")}
                   </a>
                 </Button>

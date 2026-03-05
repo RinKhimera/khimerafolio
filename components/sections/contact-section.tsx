@@ -26,7 +26,7 @@ export function ContactSection() {
           <div className="mt-10">
             <Button size="lg" asChild className="gap-2 font-medium">
               <a href={`mailto:${siteConfig.email}`}>
-                <Mail className="h-4 w-4" />
+                <Mail aria-hidden="true" className="h-4 w-4" />
                 {t("email")}
               </a>
             </Button>
@@ -44,7 +44,7 @@ export function ContactSection() {
                   rel="noopener noreferrer"
                   aria-label="GitHub"
                 >
-                  <Github className="h-5 w-5" />
+                  <Github aria-hidden="true" className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
@@ -54,7 +54,7 @@ export function ContactSection() {
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
                 >
-                  <Linkedin className="h-5 w-5" />
+                  <Linkedin aria-hidden="true" className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
@@ -64,7 +64,7 @@ export function ContactSection() {
                   rel="noopener noreferrer"
                   aria-label="Twitter"
                 >
-                  <Twitter className="h-5 w-5" />
+                  <Twitter aria-hidden="true" className="h-5 w-5" />
                 </a>
               </Button>
             </div>

@@ -8,7 +8,8 @@
     "about": "À propos",
     "projects": "Projets",
     "skills": "Compétences",
-    "contact": "Contact"
+    "contact": "Contact",
+    "switchLanguage": "Passer en anglais"
   },
   "Hero": {
     "greeting": "Bonjour, je suis",
@@ -84,6 +85,23 @@
           "Recherche optimisée avec requêtes géospatiales pour des résultats rapides basés sur la localisation"
         ]
       },
+      "rinkhimeraportfolio": {
+        "title": "Rinkhimera Portfolio",
+        "description": "Un portfolio développeur et blog hybride avec des articles MDX, des statistiques de code WakaTime, un tableau de bord GitHub, un livre d'or avec authentification OAuth et un design sombre inspiré de l'anime.",
+        "longDescription": "Rinkhimera Portfolio est un portfolio développeur personnel et blog construit avec Next.js 14 et Tailwind CSS. Au-delà d'un portfolio traditionnel, il intègre un système de blog complet propulsé par Contentlayer et MDX avec coloration syntaxique via Shiki, un tableau de bord d'activité de code en temps réel tirant ses statistiques de l'API WakaTime, et un livre d'or où les visiteurs peuvent se connecter via GitHub ou Google avec NextAuth et laisser des messages stockés dans une base PostgreSQL Neon via Prisma. Le site arbore un thème sombre avec des visuels inspirés de l'anime, des cartes animées et une grille de tableau de bord affichant les statistiques GitHub, les heures de code hebdomadaires et la répartition des langages.",
+        "features": [
+          "Blog MDX avec coloration syntaxique, support GFM et titres auto-liés via Contentlayer",
+          "Tableau de bord d'activité de code en temps réel avec intégration de l'API WakaTime",
+          "Affichage des statistiques GitHub montrant les dépôts, étoiles et abonnés",
+          "Livre d'or avec authentification OAuth (GitHub & Google) via NextAuth et Prisma",
+          "Design sombre inspiré de l'anime avec grille de cartes animées"
+        ],
+        "challenges": [
+          "Intégration de l'API WakaTime avec mise en cache côté serveur pour des statistiques de code en temps réel sans limitation de débit",
+          "Pipeline MDX complet avec Contentlayer, plugins rehype et Shiki pour du contenu de blog riche",
+          "Implémentation de NextAuth avec adaptateur Prisma pour une authentification OAuth multi-fournisseurs supportant la persistance du livre d'or"
+        ]
+      },
       "quantahive": {
         "title": "Quanta Hive",
         "description": "Un site web corporatif pour une agence digitale offrant du développement web, développement mobile, design graphique, optimisation SEO et marketing numérique.",
@@ -136,6 +154,18 @@
   },
   "Accessibility": {
     "skipToContent": "Aller au contenu"
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "Page introuvable",
+    "description": "La page que vous cherchez n'existe pas ou a \u00e9t\u00e9 d\u00e9plac\u00e9e.",
+    "backToHome": "Retour \u00e0 l'accueil"
+  },
+  "Error": {
+    "title": "Une erreur est survenue",
+    "description": "Une erreur inattendue s'est produite. Veuillez r\u00e9essayer ou revenir \u00e0 la page d'accueil.",
+    "tryAgain": "R\u00e9essayer",
+    "backToHome": "Retour \u00e0 l'accueil"
   },
   "Common": {
     "switchLanguage": "EN",

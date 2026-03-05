@@ -8,7 +8,8 @@
     "about": "About",
     "projects": "Projects",
     "skills": "Skills",
-    "contact": "Contact"
+    "contact": "Contact",
+    "switchLanguage": "Switch to French"
   },
   "Hero": {
     "greeting": "Hello, I'm",
@@ -84,6 +85,23 @@
           "Optimized search with geospatial queries for fast location-based results"
         ]
       },
+      "rinkhimeraportfolio": {
+        "title": "Rinkhimera Portfolio",
+        "description": "A developer portfolio and blog hybrid featuring MDX articles, WakaTime coding stats, GitHub dashboard, a guestbook with OAuth authentication, and a dark anime-inspired design.",
+        "longDescription": "Rinkhimera Portfolio is a personal developer portfolio and blog built with Next.js 14 and Tailwind CSS. Beyond a traditional portfolio, it integrates a full blogging system powered by Contentlayer and MDX with syntax highlighting via Shiki, a real-time coding activity dashboard pulling stats from the WakaTime API, and a guestbook where visitors can sign in via GitHub or Google using NextAuth and leave messages stored in a Neon PostgreSQL database via Prisma. The site features a dark theme with anime-inspired visuals, animated card layouts, and a dashboard grid showcasing GitHub stats, weekly coding hours, and language breakdowns.",
+        "features": [
+          "MDX blog with syntax highlighting, GFM support, and auto-linked headings via Contentlayer",
+          "Real-time coding activity dashboard with WakaTime API integration",
+          "GitHub stats display showing repositories, stars, and followers",
+          "Guestbook with OAuth authentication (GitHub & Google) via NextAuth and Prisma",
+          "Dark anime-inspired design with animated card grid layout"
+        ],
+        "challenges": [
+          "Integrated WakaTime API with server-side caching for real-time coding statistics without rate limiting",
+          "Built a full MDX pipeline with Contentlayer, rehype plugins, and Shiki for rich blog content",
+          "Implemented NextAuth with Prisma adapter for multi-provider OAuth supporting guestbook persistence"
+        ]
+      },
       "quantahive": {
         "title": "Quanta Hive",
         "description": "A corporate website for a digital agency offering web development, mobile development, graphic design, SEO optimization, and digital marketing services.",
@@ -136,6 +154,18 @@
   },
   "Accessibility": {
     "skipToContent": "Skip to content"
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "backToHome": "Back to Home"
+  },
+  "Error": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Please try again or return to the home page.",
+    "tryAgain": "Try Again",
+    "backToHome": "Back to Home"
   },
   "Common": {
     "switchLanguage": "FR",

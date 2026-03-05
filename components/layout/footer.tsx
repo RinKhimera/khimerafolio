@@ -18,7 +18,7 @@ export function Footer() {
                 href="https://nextjs.org"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-foreground underline-offset-4 hover:underline"
+                className="hover:text-foreground focus-visible:ring-ring/50 rounded-sm underline-offset-4 hover:underline focus-visible:ring-2 focus-visible:outline-none"
               >
                 {chunks}
               </a>
@@ -28,7 +28,7 @@ export function Footer() {
                 href="https://tailwindcss.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-foreground underline-offset-4 hover:underline"
+                className="hover:text-foreground focus-visible:ring-ring/50 rounded-sm underline-offset-4 hover:underline focus-visible:ring-2 focus-visible:outline-none"
               >
                 {chunks}
               </a>

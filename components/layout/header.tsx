@@ -43,7 +43,7 @@ export const Header = () => {
         {/* Logo */}
         <Link
           href="/"
-          className="font-display text-xl font-bold tracking-tight"
+          className="font-display focus-visible:ring-ring/50 rounded-sm text-xl font-bold tracking-tight focus-visible:ring-2 focus-visible:outline-none"
         >
           {siteConfig.username}
         </Link>
@@ -55,7 +55,7 @@ export const Header = () => {
               key={link.key}
               href={`/${link.href}`}
               className={cn(
-                "rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                "focus-visible:ring-ring/50 rounded-md px-3 py-2 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:outline-none",
                 activeId === link.key
                   ? "text-primary"
                   : "text-muted-foreground hover:text-foreground",
@@ -75,7 +75,7 @@ export const Header = () => {
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild className="md:hidden">
               <Button variant="ghost" size="icon">
-                <Menu className="h-5 w-5" />
+                <Menu aria-hidden="true" className="h-5 w-5" />
                 <span className="sr-only">Menu</span>
               </Button>
             </SheetTrigger>
@@ -90,7 +90,7 @@ export const Header = () => {
                     href={`/${link.href}`}
                     onClick={() => setOpen(false)}
                     className={cn(
-                      "rounded-md px-3 py-2 text-left text-sm font-medium transition-colors",
+                      "focus-visible:ring-ring/50 rounded-md px-3 py-2 text-left text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:outline-none",
                       activeId === link.key
                         ? "text-primary bg-accent"
                         : "text-muted-foreground hover:text-foreground",

@@ -42,7 +42,10 @@ export const ProjectDetailContent = ({
             href="/#projects"
             className="group text-muted-foreground hover:text-primary inline-flex items-center gap-2 font-mono text-xs tracking-widest uppercase transition-colors"
           >
-            <ArrowLeft className="h-3.5 w-3.5 transition-transform group-hover:-translate-x-1" />
+            <ArrowLeft
+              aria-hidden="true"
+              className="h-3.5 w-3.5 transition-transform group-hover:-translate-x-1"
+            />
             {td("backToProjects")}
           </Link>
         </FadeIn>
@@ -55,7 +58,7 @@ export const ProjectDetailContent = ({
                 variant="outline"
                 className="text-muted-foreground gap-1.5 font-mono text-xs"
               >
-                <Calendar className="h-3 w-3" />
+                <Calendar aria-hidden="true" className="h-3 w-3" />
                 {project.year}
               </Badge>
             </div>
@@ -98,7 +101,7 @@ export const ProjectDetailContent = ({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <ExternalLink className="h-4 w-4" />
+                  <ExternalLink aria-hidden="true" className="h-4 w-4" />
                   {td("visitLive")}
                 </a>
               </Button>
@@ -110,7 +113,7 @@ export const ProjectDetailContent = ({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Github className="h-4 w-4" />
+                  <Github aria-hidden="true" className="h-4 w-4" />
                   {td("viewSource")}
                 </a>
               </Button>

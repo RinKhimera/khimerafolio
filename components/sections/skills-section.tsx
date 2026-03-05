@@ -34,9 +34,21 @@ export function SkillsSection() {
                     <StaggerItem key={skill.name}>
                       <Badge
                         variant="outline"
-                        className="hover:bg-primary/10 hover:border-primary/30 cursor-default gap-1.5 px-3 py-1.5 text-base transition-colors [&>svg]:size-4.5"
+                        className="group hover:bg-primary/10 hover:border-primary/30 cursor-default gap-1.5 px-3 py-1.5 text-base transition-colors [&>svg]:size-4.5"
+                        style={
+                          skill.color
+                            ? ({
+                                "--skill-color": skill.color,
+                              } as React.CSSProperties)
+                            : undefined
+                        }
                       >
-                        <skill.icon className="shrink-0" />
+                        <span
+                          aria-hidden="true"
+                          className="shrink-0 text-current transition-colors duration-200 group-hover:text-(--skill-color) [&>svg]:size-4.5"
+                        >
+                          <skill.icon />
+                        </span>
                         {skill.name}
                       </Badge>
                     </StaggerItem>
