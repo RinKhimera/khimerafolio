@@ -52,7 +52,6 @@ export const generateViewport = (): Viewport => ({
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: "Metadata" })
-  const altLocale = locale === "en" ? "fr" : "en"
 
   return {
     metadataBase: new URL(siteConfig.url),

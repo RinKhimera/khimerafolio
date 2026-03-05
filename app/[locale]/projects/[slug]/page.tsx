@@ -30,7 +30,6 @@ export const generateMetadata = async ({
   const title = `${t(project.titleKey)} | Samuel Pokam`
   const description = t(project.descriptionKey)
   const url = `${siteConfig.url}/${locale}/projects/${slug}`
-  const altLocale = locale === "en" ? "fr" : "en"
 
   return {
     title,
