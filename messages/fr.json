@@ -20,7 +20,10 @@
   },
   "About": {
     "title": "À propos",
-    "description": "Je suis un développeur full-stack passionné, spécialisé dans la création d'applications web performantes, accessibles et soigneusement conçues. J'adore travailler avec les technologies modernes et transformer des problèmes complexes en solutions élégantes.",
+    "p1": "7 ans à écrire du code. Pas pour cocher des cases, mais parce que bien architecturer un produit reste l'un des exercices intellectuels les plus satisfaisants qui soit.",
+    "p2": "Basé au Québec, j'accompagne des entreprises sur leurs produits numériques le jour, et je construis mes propres plateformes la nuit — nomaqbanq pour la préparation aux examens médicaux, et FanTribe pour la monétisation de créateurs. Deux marchés différents, même obsession pour les détails.",
+    "p3": "Stack : Next.js · React · TypeScript · Tailwind · Convex · Supabase · Stripe · Vercel.",
+    "p4": "Si tu cherches quelqu'un qui comprend autant les enjeux produit que les contraintes techniques — on est probablement sur la même longueur d'onde.",
     "resume": "Télécharger le CV"
   },
   "Projects": {
@@ -114,6 +117,7 @@
       "frontend": "Frontend",
       "backend": "Backend",
       "tools": "Outils & DevOps",
+      "testing": "Tests",
       "languages": "Langages"
     }
   },
@@ -125,7 +129,7 @@
   },
   "Footer": {
     "copyright": "Tous droits réservés.",
-    "builtWith": "Construit avec Next.js, Tailwind CSS & shadcn/ui"
+    "builtWith": "Construit avec <nextjs>Next.js</nextjs> & <tailwind>Tailwind CSS</tailwind>"
   },
   "Common": {
     "switchLanguage": "EN",

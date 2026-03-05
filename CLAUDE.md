@@ -4,8 +4,10 @@
 
 ```bash
 bun dev           # Start dev server (Turbopack, localhost:3000)
-bun run build     # Production build
+bun run build     # Production build (use `run` — `bun build` is a built-in)
 bun lint          # ESLint
+bun format        # Prettier (format:check to verify only)
+bunx shadcn@latest add <component>  # Add shadcn component
 ```
 
 ## Architecture
@@ -31,16 +33,17 @@ bun lint          # ESLint
 ## Directory Layout
 
 ```
-app/[locale]/         # i18n pages
-components/layout/    # Header, Footer, ThemeToggle, LanguageSwitcher
-components/sections/  # Hero, About, Projects, Skills, Contact
-components/animations/# FadeIn, ScrollReveal, StaggerChildren
-components/ui/        # shadcn generated components
-components/providers/ # ThemeProvider
-i18n/                 # Routing, request config, navigation helpers
-messages/             # en.json, fr.json
-hooks/                # Custom hooks (useScrollSpy)
-lib/                  # Utilities (cn), constants
+app/[locale]/              # i18n pages (page, not-found)
+app/[locale]/projects/[slug]/ # Project detail pages
+components/layout/         # Header, Footer, ThemeToggle, LanguageSwitcher
+components/sections/       # Hero, About, Projects, Skills, Contact, ProjectDetailContent
+components/animations/     # FadeIn, ScrollReveal, StaggerChildren
+components/ui/             # shadcn generated components
+components/providers/      # ThemeProvider
+i18n/                      # Routing, request config, navigation helpers
+messages/                  # en.json, fr.json
+hooks/                     # Custom hooks (useScrollSpy)
+lib/                       # Utilities (cn), constants
 ```
 
 ## Non-Obvious Patterns
@@ -56,6 +59,14 @@ lib/                  # Utilities (cn), constants
 ## Code Style
 
 - TypeScript strict mode
+- Arrow functions only (no `function` declarations for components/helpers)
+- Prefer `type` over `interface` for TypeScript type definitions
 - Functional components, no default exports for components (named exports)
 - `cn()` utility from `@/lib/utils` for conditional classes
 - shadcn components in `components/ui/`, custom components outside
+
+## Instruction Routing
+
+When adding new learnings to this file:
+- **Universal patterns/gotchas** → this file (keep under 100 lines of content)
+- **If this file exceeds ~150 lines** → split topic-specific rules into `.claude/rules/<topic>.md` with `paths:` frontmatter

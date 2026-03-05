@@ -6,7 +6,7 @@ export const siteConfig = {
   socials: {
     github: "https://github.com/RinKhimera",
     linkedin: "https://linkedin.com/in/samuel-pokam",
-    twitter: "https://x.com/RinKhimera",
+    twitter: "https://x.com/rin_khimera",
   },
 } as const
 

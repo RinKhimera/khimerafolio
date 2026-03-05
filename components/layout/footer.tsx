@@ -11,7 +11,30 @@ export function Footer() {
         <p className="text-muted-foreground text-sm">
           &copy; {year} {siteConfig.name}. {t("copyright")}
         </p>
-        <p className="text-muted-foreground text-xs">{t("builtWith")}</p>
+        <p className="text-muted-foreground text-xs">
+          {t.rich("builtWith", {
+            nextjs: (chunks) => (
+              <a
+                href="https://nextjs.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-foreground underline-offset-4 hover:underline"
+              >
+                {chunks}
+              </a>
+            ),
+            tailwind: (chunks) => (
+              <a
+                href="https://tailwindcss.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-foreground underline-offset-4 hover:underline"
+              >
+                {chunks}
+              </a>
+            ),
+          })}
+        </p>
       </div>
     </footer>
   )

@@ -33,7 +33,10 @@ export function ProjectsSection() {
             <StaggerItem key={project.slug}>
               <div className="group border-border bg-card hover:border-primary/30 relative rounded-xl border p-6 transition-colors">
                 {/* Project image */}
-                <div className="bg-muted/50 relative mb-4 aspect-video overflow-hidden rounded-lg">
+                <Link
+                  href={`/projects/${project.slug}`}
+                  className="bg-muted/50 relative mb-4 block aspect-video cursor-pointer overflow-hidden rounded-lg"
+                >
                   <Image
                     src={project.image}
                     alt={t(project.titleKey)}
@@ -42,7 +45,7 @@ export function ProjectsSection() {
                     quality={90}
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                </div>
+                </Link>
 
                 <h3 className="font-display text-lg font-semibold">
                   {t(project.titleKey)}

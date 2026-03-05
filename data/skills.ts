@@ -1,5 +1,6 @@
 import type { ComponentType } from "react"
 import {
+  SiAngular,
   SiReact,
   SiNextdotjs,
   SiTypescript,
@@ -23,7 +24,16 @@ import {
   SiFramer,
   SiHtml5,
   SiCss,
+  SiJest,
+  SiVitest,
+  SiSupabase,
+  SiGraphql,
+  SiTrpc,
+  SiCypress,
+  SiConvex,
+  SiDrizzle,
 } from "@icons-pack/react-simple-icons"
+import { FlaskConical, Cloud } from "lucide-react"
 
 export interface Skill {
   name: string
@@ -41,6 +51,7 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "React", icon: SiReact },
       { name: "Next.js", icon: SiNextdotjs },
+      { name: "Angular", icon: SiAngular },
       { name: "TypeScript", icon: SiTypescript },
       { name: "Tailwind CSS", icon: SiTailwindcss },
       { name: "Framer Motion", icon: SiFramer },
@@ -56,7 +67,12 @@ export const skillCategories: SkillCategory[] = [
       { name: "PostgreSQL", icon: SiPostgresql },
       { name: "MongoDB", icon: SiMongodb },
       { name: "Prisma", icon: SiPrisma },
+      { name: "Drizzle", icon: SiDrizzle },
+      { name: "Supabase", icon: SiSupabase },
+      { name: "Convex", icon: SiConvex },
       { name: "Firebase", icon: SiFirebase },
+      { name: "GraphQL", icon: SiGraphql },
+      { name: "tRPC", icon: SiTrpc },
       { name: "Redis", icon: SiRedis },
     ],
   },
@@ -67,9 +83,19 @@ export const skillCategories: SkillCategory[] = [
       { name: "GitHub", icon: SiGithub },
       { name: "Docker", icon: SiDocker },
       { name: "Vercel", icon: SiVercel },
+      { name: "Azure DevOps", icon: Cloud },
       { name: "GitHub Actions", icon: SiGithubactions },
       { name: "Figma", icon: SiFigma },
       { name: "Linux", icon: SiLinux },
+    ],
+  },
+  {
+    key: "testing",
+    skills: [
+      { name: "Jest", icon: SiJest },
+      { name: "Vitest", icon: SiVitest },
+      { name: "Cypress", icon: SiCypress },
+      { name: "Playwright", icon: FlaskConical },
     ],
   },
   {
