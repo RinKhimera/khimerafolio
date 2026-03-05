@@ -9,6 +9,7 @@ import {
 } from "next-intl/server"
 import { notFound } from "next/navigation"
 import { routing } from "@/i18n/routing"
+import { siteConfig } from "@/lib/constants"
 import { ThemeProvider } from "@/components/providers/theme-provider"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
@@ -51,10 +52,33 @@ export const generateViewport = (): Viewport => ({
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: "Metadata" })
+  const altLocale = locale === "en" ? "fr" : "en"
 
   return {
+    metadataBase: new URL(siteConfig.url),
     title: t("title"),
     description: t("description"),
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: `${siteConfig.url}/${locale}`,
+      siteName: siteConfig.name,
+      locale: locale === "en" ? "en_US" : "fr_CA",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+    },
+    alternates: {
+      canonical: `${siteConfig.url}/${locale}`,
+      languages: {
+        en: `${siteConfig.url}/en`,
+        fr: `${siteConfig.url}/fr`,
+        "x-default": `${siteConfig.url}/en`,
+      },
+    },
   }
 }
 
@@ -74,6 +98,33 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body
         className={`${geistSans.variable} ${syne.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "WebSite",
+                  name: siteConfig.name,
+                  url: siteConfig.url,
+                  inLanguage: [locale === "en" ? "en-US" : "fr-CA"],
+                },
+                {
+                  "@type": "Person",
+                  name: siteConfig.name,
+                  url: siteConfig.url,
+                  jobTitle: "Full-Stack Developer",
+                  sameAs: [
+                    siteConfig.socials.github,
+                    siteConfig.socials.linkedin,
+                    siteConfig.socials.twitter,
+                  ],
+                },
+              ],
+            }),
+          }}
+        />
         <a
           href="#main-content"
           className="focus:bg-background focus:text-foreground focus:ring-ring sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:rounded-md focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:shadow-lg focus:ring-2"
