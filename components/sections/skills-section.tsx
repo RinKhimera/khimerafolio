@@ -13,10 +13,10 @@ export function SkillsSection() {
   const t = useTranslations("Skills")
 
   return (
-    <section id="skills" className="py-24 sm:py-32">
+    <section id="skills" className="scroll-mt-20 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <ScrollReveal>
-          <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="font-display text-3xl font-bold tracking-tight text-balance sm:text-4xl">
             {t("title")}
             <span className="text-primary">.</span>
           </h2>

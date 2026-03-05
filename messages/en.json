@@ -131,6 +131,9 @@
     "copyright": "All rights reserved.",
     "builtWith": "Built with <nextjs>Next.js</nextjs> & <tailwind>Tailwind CSS</tailwind>"
   },
+  "Accessibility": {
+    "skipToContent": "Skip to content"
+  },
   "Common": {
     "switchLanguage": "FR",
     "lightMode": "Light mode",

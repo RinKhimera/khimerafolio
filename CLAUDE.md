@@ -53,6 +53,8 @@ lib/                       # Utilities (cn), constants
 - **Async params**: All `params` in layouts/pages are `Promise` — always `await params`.
 - **motion "use client"**: All components using `motion` must be client components. Animation wrappers in `components/animations/` handle this boundary.
 - **i18n translations**: Use `useTranslations("Namespace")` in client components, `getTranslations()` in server components. Translation keys are structured as `Namespace.key`.
+- **i18n layout order**: `setRequestLocale(locale)` must be called before `getMessages()` or `getTranslations()` in layouts/pages. Do NOT parallelize with `Promise.all()` — next-intl requires this sequence.
+- **Viewport vs Metadata**: `themeColor` must go in `generateViewport()`, NOT `generateMetadata()`. Next.js 16 warns and silently drops it if placed in metadata.
 - **Fonts**: Syne (`font-display`), Geist Sans (`font-sans`), JetBrains Mono (`font-mono`). Variables set in locale layout, mapped in `globals.css` via `@theme inline`.
 - **Package manager**: Bun exclusively. Use `bunx` for one-off CLI tools (e.g., `bunx shadcn@latest add`).
 
@@ -68,5 +70,6 @@ lib/                       # Utilities (cn), constants
 ## Instruction Routing
 
 When adding new learnings to this file:
+
 - **Universal patterns/gotchas** → this file (keep under 100 lines of content)
 - **If this file exceeds ~150 lines** → split topic-specific rules into `.claude/rules/<topic>.md` with `paths:` frontmatter

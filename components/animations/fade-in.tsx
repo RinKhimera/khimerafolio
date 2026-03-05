@@ -1,21 +1,27 @@
 "use client"
 
-import { motion } from "motion/react"
+import { motion, useReducedMotion } from "motion/react"
 import type { ReactNode } from "react"
 
-interface FadeInProps {
+type FadeInProps = {
   children: ReactNode
   delay?: number
   duration?: number
   className?: string
 }
 
-export function FadeIn({
+export const FadeIn = ({
   children,
   delay = 0,
   duration = 0.6,
   className,
-}: FadeInProps) {
+}: FadeInProps) => {
+  const shouldReduce = useReducedMotion()
+
+  if (shouldReduce) {
+    return <div className={className}>{children}</div>
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

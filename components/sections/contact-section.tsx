@@ -10,10 +10,10 @@ export function ContactSection() {
   const t = useTranslations("Contact")
 
   return (
-    <section id="contact" className="bg-muted/30 py-24 sm:py-32">
+    <section id="contact" className="bg-muted/30 scroll-mt-20 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6 text-center">
         <ScrollReveal>
-          <h2 className="font-display text-3xl font-bold tracking-tight sm:text-5xl">
+          <h2 className="font-display text-3xl font-bold tracking-tight text-balance sm:text-5xl">
             {t("title")}
             <span className="text-primary">.</span>
           </h2>

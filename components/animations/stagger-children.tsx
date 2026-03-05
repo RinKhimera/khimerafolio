@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, type Variants } from "motion/react"
+import { motion, useReducedMotion, type Variants } from "motion/react"
 import type { ReactNode } from "react"
 
 const containerVariants: Variants = {
@@ -23,12 +23,21 @@ const itemVariants: Variants = {
   },
 }
 
-interface StaggerChildrenProps {
+type StaggerChildrenProps = {
   children: ReactNode
   className?: string
 }
 
-export function StaggerChildren({ children, className }: StaggerChildrenProps) {
+export const StaggerChildren = ({
+  children,
+  className,
+}: StaggerChildrenProps) => {
+  const shouldReduce = useReducedMotion()
+
+  if (shouldReduce) {
+    return <div className={className}>{children}</div>
+  }
+
   return (
     <motion.div
       variants={containerVariants}
@@ -42,13 +51,19 @@ export function StaggerChildren({ children, className }: StaggerChildrenProps) {
   )
 }
 
-export function StaggerItem({
+export const StaggerItem = ({
   children,
   className,
 }: {
   children: ReactNode
   className?: string
-}) {
+}) => {
+  const shouldReduce = useReducedMotion()
+
+  if (shouldReduce) {
+    return <div className={className}>{children}</div>
+  }
+
   return (
     <motion.div variants={itemVariants} className={className}>
       {children}

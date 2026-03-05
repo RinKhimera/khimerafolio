@@ -25,9 +25,7 @@ const brace = "text-yellow-300"
 
 const ConfigTab = () => (
   <>
-    <TypingAnimation className={punc}>
-      {"// samuel.config.ts"}
-    </TypingAnimation>
+    <TypingAnimation className={punc}>{"// samuel.config.ts"}</TypingAnimation>
 
     <AnimatedSpan>
       <span className={kw}>const</span>{" "}
@@ -94,8 +92,7 @@ const ConfigTab = () => (
         <span className={key}>stack</span>
         <span className={punc}>:</span> <span className={brace}>{"["}</span>
         <span className={str}>{'"Next.js"'}</span>
-        <span className={punc}>,</span>{" "}
-        <span className={str}>{'"React"'}</span>
+        <span className={punc}>,</span> <span className={str}>{'"React"'}</span>
         <span className={punc}>,</span>{" "}
         <span className={str}>{'"TypeScript"'}</span>
         <span className={brace}>{"]"}</span>
@@ -137,13 +134,10 @@ const ConfigTab = () => (
 
 const TypeTab = () => (
   <>
-    <TypingAnimation className={punc}>
-      {"// developer.d.ts"}
-    </TypingAnimation>
+    <TypingAnimation className={punc}>{"// developer.d.ts"}</TypingAnimation>
 
     <AnimatedSpan>
-      <span className={kw}>type</span>{" "}
-      <span className={tp}>Developer</span>{" "}
+      <span className={kw}>type</span> <span className={tp}>Developer</span>{" "}
       <span className={punc}>=</span> <span className={brace}>{"{"}</span>
     </AnimatedSpan>
 
@@ -167,8 +161,7 @@ const TypeTab = () => (
     <AnimatedSpan>
       <span className="pl-4">
         <span className={key}>focus</span>
-        <span className={punc}>:</span>{" "}
-        <span className={kw}>readonly</span>{" "}
+        <span className={punc}>:</span> <span className={kw}>readonly</span>{" "}
         <span className={tp}>string[]</span>
         <span className={punc}>;</span>
       </span>
@@ -177,8 +170,7 @@ const TypeTab = () => (
     <AnimatedSpan>
       <span className="pl-4">
         <span className={key}>stack</span>
-        <span className={punc}>:</span>{" "}
-        <span className={kw}>readonly</span>{" "}
+        <span className={punc}>:</span> <span className={kw}>readonly</span>{" "}
         <span className={tp}>string[]</span>
         <span className={punc}>;</span>
       </span>
@@ -189,8 +181,7 @@ const TypeTab = () => (
         <span className={key}>status</span>
         <span className={punc}>:</span>{" "}
         <span className={str}>{'"available"'}</span>{" "}
-        <span className={punc}>|</span>{" "}
-        <span className={str}>{'"busy"'}</span>
+        <span className={punc}>|</span> <span className={str}>{'"busy"'}</span>
         <span className={punc}>;</span>
       </span>
     </AnimatedSpan>
@@ -258,26 +249,19 @@ const TypeTab = () => (
 
 const InitTab = () => (
   <>
-    <TypingAnimation className={punc}>
-      {"// samuel.init.ts"}
-    </TypingAnimation>
+    <TypingAnimation className={punc}>{"// samuel.init.ts"}</TypingAnimation>
 
     <AnimatedSpan>
-      <span className={kw}>const</span>{" "}
-      <span className={fn}>init</span>{" "}
-      <span className={punc}>=</span>{" "}
-      <span className={kw}>async</span>{" "}
-      <span className={punc}>()</span>{" "}
-      <span className={kw}>{"=>"}</span>{" "}
+      <span className={kw}>const</span> <span className={fn}>init</span>{" "}
+      <span className={punc}>=</span> <span className={kw}>async</span>{" "}
+      <span className={punc}>()</span> <span className={kw}>{"=>"}</span>{" "}
       <span className={brace}>{"{"}</span>
     </AnimatedSpan>
 
     <AnimatedSpan>
       <span className="pl-4">
-        <span className={kw}>const</span>{" "}
-        <span className={fn}>dev</span>{" "}
-        <span className={punc}>=</span>{" "}
-        <span className={kw}>await</span>{" "}
+        <span className={kw}>const</span> <span className={fn}>dev</span>{" "}
+        <span className={punc}>=</span> <span className={kw}>await</span>{" "}
         <span className={fn}>loadProfile</span>
         <span className={punc}>(</span>
         <span className={brace}>{"{"}</span>
@@ -335,8 +319,7 @@ const InitTab = () => (
     <AnimatedSpan>
       <span className="pl-8">
         <span className={str}>{'"Next.js"'}</span>
-        <span className={punc}>,</span>{" "}
-        <span className={str}>{'"React"'}</span>
+        <span className={punc}>,</span> <span className={str}>{'"React"'}</span>
         <span className={punc}>,</span>{" "}
         <span className={str}>{'"TypeScript"'}</span>
         <span className={punc}>,</span>
@@ -367,8 +350,7 @@ const InitTab = () => (
       <span className="pl-4">
         <span className={fn}>dev</span>
         <span className={punc}>.</span>
-        <span className={key}>status</span>{" "}
-        <span className={punc}>=</span>{" "}
+        <span className={key}>status</span> <span className={punc}>=</span>{" "}
         <span className={str}>{'"available"'}</span>
         <span className={punc}>;</span>
       </span>
@@ -378,8 +360,7 @@ const InitTab = () => (
       <span className="pl-4">
         <span className={fn}>dev</span>
         <span className={punc}>.</span>
-        <span className={key}>coffee</span>{" "}
-        <span className={punc}>=</span>{" "}
+        <span className={key}>coffee</span> <span className={punc}>=</span>{" "}
         <span className={num}>Infinity</span>
         <span className={punc}>;</span>
       </span>
@@ -389,8 +370,7 @@ const InitTab = () => (
 
     <AnimatedSpan>
       <span className="pl-4">
-        <span className={kw}>return</span>{" "}
-        <span className={fn}>dev</span>
+        <span className={kw}>return</span> <span className={fn}>dev</span>
         <span className={punc}>;</span>
       </span>
     </AnimatedSpan>
@@ -420,10 +400,10 @@ export const AboutSection = () => {
   const t = useTranslations("About")
 
   return (
-    <section id="about" className="py-24 sm:py-32">
+    <section id="about" className="scroll-mt-20 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <ScrollReveal>
-          <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="font-display text-3xl font-bold tracking-tight text-balance sm:text-4xl">
             {t("title")}
             <span className="text-primary">.</span>
           </h2>

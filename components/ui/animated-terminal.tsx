@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { motion, type Variants } from "motion/react"
+import { motion, useReducedMotion, type Variants } from "motion/react"
 
 import { cn } from "@/lib/utils"
 
@@ -19,14 +19,26 @@ type AnimatedSpanProps = {
   className?: string
 }
 
-export const AnimatedSpan = ({ children, className }: AnimatedSpanProps) => (
-  <motion.div
-    variants={lineVariants}
-    className={cn("text-sm font-normal tracking-tight", className)}
-  >
-    {children}
-  </motion.div>
-)
+export const AnimatedSpan = ({ children, className }: AnimatedSpanProps) => {
+  const shouldReduce = useReducedMotion()
+
+  if (shouldReduce) {
+    return (
+      <div className={cn("text-sm font-normal tracking-tight", className)}>
+        {children}
+      </div>
+    )
+  }
+
+  return (
+    <motion.div
+      variants={lineVariants}
+      className={cn("text-sm font-normal tracking-tight", className)}
+    >
+      {children}
+    </motion.div>
+  )
+}
 
 // ── TypingAnimation: types a plain string char by char ──
 
@@ -41,10 +53,12 @@ export const TypingAnimation = ({
   className,
   duration = 40,
 }: TypingAnimationProps) => {
+  const shouldReduce = useReducedMotion()
   const [displayedText, setDisplayedText] = useState("")
   const [started, setStarted] = useState(false)
 
   useEffect(() => {
+    if (shouldReduce) return
     if (!started) return
     let i = 0
     const interval = setInterval(() => {
@@ -56,7 +70,15 @@ export const TypingAnimation = ({
       }
     }, duration)
     return () => clearInterval(interval)
-  }, [children, duration, started])
+  }, [children, duration, started, shouldReduce])
+
+  if (shouldReduce) {
+    return (
+      <div className={cn("text-sm font-normal tracking-tight", className)}>
+        {children}
+      </div>
+    )
+  }
 
   return (
     <motion.div
@@ -100,6 +122,7 @@ export const Terminal = ({
   startDelay = 0.6,
   stagger = 0.08,
 }: TerminalProps) => {
+  const shouldReduce = useReducedMotion()
   const [activeTab, setActiveTab] = useState(0)
   const [animationKey, setAnimationKey] = useState(0)
 
@@ -149,38 +172,46 @@ export const Terminal = ({
         </div>
       </div>
 
-      {/* Code area — key forces remount to restart animation */}
+      {/* Code area */}
       <pre className="overflow-auto p-5">
-        <motion.code
-          key={`${activeTab}-${animationKey}`}
-          className="grid gap-y-0.5"
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: {},
-            visible: {
-              transition: {
-                delayChildren: animationKey === 0 ? startDelay : 0.1,
-                staggerChildren: stagger,
+        {shouldReduce ? (
+          <code className="grid gap-y-0.5">{tabs[activeTab].content}</code>
+        ) : (
+          <motion.code
+            key={`${activeTab}-${animationKey}`}
+            className="grid gap-y-0.5"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  delayChildren: animationKey === 0 ? startDelay : 0.1,
+                  staggerChildren: stagger,
+                },
               },
-            },
-          }}
-        >
-          {tabs[activeTab].content}
-        </motion.code>
+            }}
+          >
+            {tabs[activeTab].content}
+          </motion.code>
+        )}
       </pre>
 
-      {/* Blinking cursor */}
+      {/* Cursor */}
       <div className="px-5 pb-4">
-        <motion.span
-          animate={{ opacity: [1, 0] }}
-          transition={{
-            duration: 0.8,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-          className="inline-block h-4 w-2 bg-emerald-400/80"
-        />
+        {shouldReduce ? (
+          <span className="inline-block h-4 w-2 bg-emerald-400/80" />
+        ) : (
+          <motion.span
+            animate={{ opacity: [1, 0] }}
+            transition={{
+              duration: 0.8,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+            className="inline-block h-4 w-2 bg-emerald-400/80"
+          />
+        )}
       </div>
     </div>
   )

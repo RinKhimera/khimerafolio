@@ -60,7 +60,7 @@ export const ProjectDetailContent = ({
               </Badge>
             </div>
 
-            <h1 className="font-display mt-5 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="font-display mt-5 text-4xl font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl">
               {t(project.titleKey)}
               <span className="text-primary">.</span>
             </h1>
@@ -144,7 +144,7 @@ export const ProjectDetailContent = ({
               </h2>
               <ul className="mt-8 space-y-5">
                 {features.map((feature, i) => (
-                  <li key={i} className="flex gap-4">
+                  <li key={`feature-${i}`} className="flex gap-4">
                     <span className="text-primary/60 mt-0.5 font-mono text-xs tabular-nums">
                       {String(i + 1).padStart(2, "0")}
                     </span>
@@ -167,7 +167,7 @@ export const ProjectDetailContent = ({
               </h2>
               <ul className="mt-8 space-y-5">
                 {challenges.map((challenge, i) => (
-                  <li key={i} className="flex items-start gap-4">
+                  <li key={`challenge-${i}`} className="flex items-start gap-4">
                     <span className="bg-primary mt-2 h-1.5 w-1.5 shrink-0 rounded-full" />
                     <span className="text-muted-foreground text-sm leading-relaxed sm:text-base">
                       {challenge}
@@ -209,7 +209,7 @@ export const ProjectDetailContent = ({
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 {project.screenshots.map((src, i) => (
                   <div
-                    key={i}
+                    key={src}
                     className="border-border bg-muted/30 overflow-hidden rounded-lg border"
                   >
                     <div className="aspect-video">
