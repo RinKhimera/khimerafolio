@@ -45,7 +45,7 @@ const OgImage = () =>
           marginTop: 24,
         }}
       >
-        khimerafolio.vercel.app
+        samuelpokam.com
       </div>
     </div>,
     { ...size },

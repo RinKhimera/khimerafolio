@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Samuel Pokam",
   username: "RinKhimera",
   email: "dixiades@gmail.com",
-  url: "https://khimerafolio.vercel.app",
+  url: "https://samuelpokam.com",
   socials: {
     github: "https://github.com/RinKhimera",
     linkedin: "https://linkedin.com/in/samuel-pokam",
