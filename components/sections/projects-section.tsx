@@ -30,8 +30,8 @@ export function ProjectsSection() {
 
         <StaggerChildren className="mt-12 grid gap-6 md:grid-cols-2">
           {featured.map((project) => (
-            <StaggerItem key={project.slug}>
-              <div className="group border-border bg-card hover:border-primary/30 relative rounded-xl border p-6 transition-colors">
+            <StaggerItem key={project.slug} className="h-full">
+              <div className="group border-border bg-card hover:border-primary/30 relative flex h-full flex-col rounded-xl border p-6 transition-colors">
                 {/* Project image */}
                 <Link
                   href={`/projects/${project.slug}`}
@@ -50,7 +50,7 @@ export function ProjectsSection() {
                 <h3 className="font-display text-lg font-semibold">
                   {t(project.titleKey)}
                 </h3>
-                <p className="text-muted-foreground mt-2 text-sm">
+                <p className="text-muted-foreground mt-2 flex-1 text-sm">
                   {t(project.descriptionKey)}
                 </p>
 

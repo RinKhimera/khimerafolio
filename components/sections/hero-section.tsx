@@ -75,7 +75,7 @@ export const HeroSection = () => {
       </div>
 
       {/* Scroll indicator */}
-      <motion.div
+      <motion.button
         {...(shouldReduce
           ? {}
           : {
@@ -83,7 +83,13 @@ export const HeroSection = () => {
               animate: { opacity: 1 },
               transition: { delay: 1.3, duration: 0.8 },
             })}
-        className="absolute bottom-10"
+        className="absolute bottom-10 cursor-pointer rounded-full border border-current/20 p-3 transition-colors hover:border-current/50"
+        onClick={() =>
+          document
+            .getElementById("about")
+            ?.scrollIntoView({ behavior: "smooth" })
+        }
+        aria-label={t("scroll_down")}
       >
         <motion.div
           {...(shouldReduce
@@ -99,7 +105,7 @@ export const HeroSection = () => {
         >
           <ArrowDown className="text-muted-foreground h-5 w-5" />
         </motion.div>
-      </motion.div>
+      </motion.button>
     </section>
   )
 }

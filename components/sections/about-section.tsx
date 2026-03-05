@@ -426,9 +426,15 @@ export const AboutSection = () => {
                 {t("p4")}
               </p>
               <div className="pt-2">
-                <Button variant="outline" className="gap-2">
-                  <FileDown className="h-4 w-4" />
-                  {t("resume")}
+                <Button variant="outline" className="gap-2" asChild>
+                  <a
+                    href="/resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FileDown className="h-4 w-4" />
+                    {t("resume")}
+                  </a>
                 </Button>
               </div>
             </div>

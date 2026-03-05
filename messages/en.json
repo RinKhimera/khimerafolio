@@ -16,7 +16,8 @@
     "role": "Full-Stack Developer",
     "tagline": "I build modern web experiences with clean code and thoughtful design.",
     "cta_projects": "View Projects",
-    "cta_contact": "Get in Touch"
+    "cta_contact": "Get in Touch",
+    "scroll_down": "Scroll to about section"
   },
   "About": {
     "title": "About Me",
@@ -83,19 +84,21 @@
           "Optimized search with geospatial queries for fast location-based results"
         ]
       },
-      "delta": {
-        "title": "Project Delta",
-        "description": "A cross-platform mobile app for personal finance tracking with offline support and cloud sync via Firebase.",
-        "longDescription": "Project Delta is a cross-platform mobile application for personal finance management, built with React Native and Expo. The app enables users to track expenses, set budgets, and visualize spending patterns through intuitive charts. It features full offline support with local data persistence and seamless cloud synchronization via Firebase, ensuring users always have access to their financial data.",
+      "quantahive": {
+        "title": "Quanta Hive",
+        "description": "A corporate website for a digital agency offering web development, mobile development, graphic design, SEO optimization, and digital marketing services.",
+        "longDescription": "Quanta Hive is a modern corporate website for a digital agency built with Next.js 16 and Tailwind CSS v4. The site showcases the agency's full range of services — web development, mobile development, graphic design, SEO optimization, and digital marketing — through dedicated service pages with detailed breakdowns. It features smooth Framer Motion animations, light/dark theme support, a contact form powered by EmailJS, and a fully responsive design optimized for all devices.",
         "features": [
-          "Expense tracking with categorization and budget management",
-          "Visual spending analytics with interactive charts",
-          "Full offline support with local persistence",
-          "Cloud sync via Firebase for cross-device access"
+          "Dedicated service pages for web development, mobile development, graphic design, SEO, and digital marketing",
+          "Smooth page transitions and scroll animations with Framer Motion",
+          "Light and dark theme support via next-themes",
+          "Contact form with EmailJS integration for direct inquiries",
+          "Fully responsive design with modern UI components from shadcn/ui"
         ],
         "challenges": [
-          "Implemented offline-first architecture with conflict resolution for cloud sync",
-          "Built performant chart rendering for large datasets on mobile devices"
+          "Designed a scalable multi-page architecture with App Router for service-specific landing pages",
+          "Implemented performant animations that maintain 60fps across all devices and theme modes",
+          "Built a cohesive design system with Tailwind CSS v4 and shadcn/ui for consistent branding"
         ]
       }
     }

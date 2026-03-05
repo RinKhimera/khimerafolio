@@ -16,7 +16,8 @@
     "role": "Développeur Full-Stack",
     "tagline": "Je construis des expériences web modernes avec du code propre et un design réfléchi.",
     "cta_projects": "Voir les projets",
-    "cta_contact": "Me contacter"
+    "cta_contact": "Me contacter",
+    "scroll_down": "Défiler vers la section à propos"
   },
   "About": {
     "title": "À propos",
@@ -83,19 +84,21 @@
           "Recherche optimisée avec requêtes géospatiales pour des résultats rapides basés sur la localisation"
         ]
       },
-      "delta": {
-        "title": "Projet Delta",
-        "description": "Une application mobile multiplateforme de suivi des finances personnelles avec support hors-ligne et synchronisation cloud via Firebase.",
-        "longDescription": "Projet Delta est une application mobile multiplateforme pour la gestion des finances personnelles, construite avec React Native et Expo. L'application permet aux utilisateurs de suivre leurs dépenses, définir des budgets et visualiser leurs habitudes de dépenses à travers des graphiques intuitifs. Elle dispose d'un support hors-ligne complet avec persistance locale des données et synchronisation cloud fluide via Firebase, garantissant aux utilisateurs un accès permanent à leurs données financières.",
+      "quantahive": {
+        "title": "Quanta Hive",
+        "description": "Un site web corporatif pour une agence digitale offrant du développement web, développement mobile, design graphique, optimisation SEO et marketing numérique.",
+        "longDescription": "Quanta Hive est un site web corporatif moderne pour une agence digitale, construit avec Next.js 16 et Tailwind CSS v4. Le site présente la gamme complète de services de l'agence — développement web, développement mobile, design graphique, optimisation SEO et marketing numérique — à travers des pages de services dédiées avec des descriptions détaillées. Il propose des animations fluides avec Framer Motion, un support de thème clair/sombre, un formulaire de contact propulsé par EmailJS et un design entièrement responsive optimisé pour tous les appareils.",
         "features": [
-          "Suivi des dépenses avec catégorisation et gestion de budget",
-          "Analytiques visuelles des dépenses avec graphiques interactifs",
-          "Support hors-ligne complet avec persistance locale",
-          "Synchronisation cloud via Firebase pour l'accès multi-appareils"
+          "Pages de services dédiées pour le développement web, mobile, design graphique, SEO et marketing numérique",
+          "Transitions de pages et animations au défilement fluides avec Framer Motion",
+          "Support de thème clair et sombre via next-themes",
+          "Formulaire de contact avec intégration EmailJS pour les demandes directes",
+          "Design entièrement responsive avec des composants UI modernes de shadcn/ui"
         ],
         "challenges": [
-          "Architecture offline-first avec résolution de conflits pour la synchronisation cloud",
-          "Rendu de graphiques performant pour de grands ensembles de données sur appareils mobiles"
+          "Architecture multi-pages évolutive avec App Router pour des pages d'atterrissage spécifiques aux services",
+          "Animations performantes maintenant 60fps sur tous les appareils et modes de thème",
+          "Système de design cohérent avec Tailwind CSS v4 et shadcn/ui pour une image de marque uniforme"
         ]
       }
     }
