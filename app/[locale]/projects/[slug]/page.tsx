@@ -59,6 +59,7 @@ export const generateMetadata = async ({
       languages: {
         en: `${siteConfig.url}/en/projects/${slug}`,
         fr: `${siteConfig.url}/fr/projects/${slug}`,
+        "x-default": `${siteConfig.url}/en/projects/${slug}`,
       },
     },
   }
